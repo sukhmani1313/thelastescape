@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>    The Last Escape</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffd700; /* Yellow background */
+            color: #000000;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .location, .contact-info {
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: left;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .location img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .location:hover, .contact-info:hover {
+            background-color: #f1f1f1;
+        }
+        .location h2, .contact-info h2 {
+            margin: 0;
+        }
+        .location p, .contact-info p {
+            margin-top: 10px;
+        }
+        .btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #444;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #333;
+        }
+        .contact-info {
+            display: none;
+        }
+    </style>
+    <script>
+        function showSection(section) {
+            document.getElementById('locations').style.display = section === 'locations' ? 'block' : 'none';
+            document.getElementById('contact').style.display = section === 'contact' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <h1>The Last Escape</h1>
+
+    <button class="btn" onclick="showSection('locations')">Safe Locations</button>
+    <button class="btn" onclick="showSection('contact')">Contact Us</button>
+
+    <div id="locations">
+        <div class="location">
+            <h2>CN Tower</h2>
+            <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Toronto_-_ON_-_Toronto_Harbourfront7.jpg/640px-Toronto_-_ON_-_Toronto_Harbourfront7.jpg alt="CN Tower">
+            <p>Structural Features
+
+            Use the tower's height for superior visibility to spot approaching zombies and identify safe routes.
+            Observation Decks: Shelter in observation decks, which offer secure, elevated positions.
+            Accessibility
+
+             The tower has controlled access points, making it easier to defend against zombie incursions.
+            Elevators and Stairs: Utilize elevators (if operational) and stairways to control movement between levels and as potential escape routes.
+            Resources
+ Scavenge for food, water, and useful supplies in the tower’s restaurants and shops.
+            Utility Areas: Explore maintenance and utility rooms for tools, first aid kits, and other essential items.
+            Safety and Defense
+
+             Lock down individual floors to create safe zones and control access.
+             Use furniture and other items to create barricades and reinforce doorways.
+            Communication and Navigation
+ Utilize the tower’s height to create visible signals, such as fires or large signs, for rescuers.
+            Internal Communication Systems: Use any available internal communication systems to coordinate with other survivors.
+            Escape Planning
+
+             Locate all possible exits, including emergency stairwells and service elevators.
+            Rooftop Access: Consider the tower’s roof for helicopter rescues or to signal for help.
+            Cover and Concealment
+
+             Use these for both hiding and monitoring the surrounding area.
+            Internal Rooms: Utilize the tower’s many rooms and storage areas for concealment and as temporary safe zones.
+            Strategy and Coordination
+ Collaborate with other survivors to defend the tower and share resources.
+             Maintain a lookout for zombies and other threats, ensuring the tower remains secure.</p>
+        </div>
+
+        <div class="location">
+            <h2>Royal Ontario Museum</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Royal_Ontario_Museum_in_Fall_2021.jpg/1200px-Royal_Ontario_Museum_in_Fall_2021.jpg" alt="Royal Ontario Museum">
+            <p>Structural Features
+
+             Use the museum’s intricate layout of multiple floors and wings to find secure hiding spots and create obstacles for zombies.
+            Take advantage of the museum’s solid construction for protection against attacks.
+            Resources
+ Scavenge the museum's cafeteria and gift shops for food, water, and useful supplies.
+            Repurpose items from exhibits, such as ropes, tools, and sturdy objects, for defense and practical use.
+            Cover and Concealment
+
+            Use large exhibit halls and storage rooms for hiding and creating temporary safe zones.
+            Back Rooms and Offices: Utilize staff offices and back rooms for secure shelter and privacy.
+            Communication and Navigation
+
+            Museum Maps: Use available maps of the museum to navigate through different sections and plan escape routes.
+            High Points: Access high points within the museum, such as upper floors, for better visibility and to signal for help.
+            Safety and Defense
+
+            Barricade Entrances: Secure main entrances and hallways to prevent zombie entry and control access points.
+            Emergency Protocols: Follow or adapt the museum’s emergency protocols for fire and security to enhance safety.
+            Escape Planning
+
+            Identify Exits: Locate all possible exits, including emergency exits and service doors, to plan multiple escape routes.
+            Underground Access: Explore underground access points, such as basements or tunnels, for alternative escape options.
+            Strategy and Coordination
+
+            Group Coordination: Work with other survivors to defend the museum, share resources, and maintain morale.
+            Stay Vigilant: Keep a constant watch for zombies and other threats, ensuring all areas remain secure.</p>
+        </div>
+
+        <div class="location">
+            <h2>Abandoned Warehouse</h2>
+            <img src="data:image/jpeg;base64,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" alt="Abandoned Warehouse">
+            <p>Structural Features
+
+            Large Warehouses: Shelter in large, sturdy warehouses that provide ample space and protection.
+            Multiple Entrances and Exits: Use multiple entry points to avoid being trapped and to facilitate escape routes.
+            Resources
+
+            Storage Supplies: Scavenge for leftover supplies such as canned food, bottled water, and tools that can be used for defense and survival.
+            Abandoned Vehicles: Look for vehicles in loading docks or parking lots for potential transportation.
+            Cover and Concealment
+
+            Stacked Crates and Pallets: Use crates and pallets for cover and to create barricades against zombies.
+            Dark Corners and Storage Areas: Hide in dark corners and storage areas to avoid detection.
+            Communication and Navigation
+
+            Warehouse Maps: Use any available maps to understand the layout and plan escape routes.
+            Roof Access: Utilize rooftops for better visibility and to signal for help.
+            Safety and Strategy
+
+            Barricade Entrances: Secure entrances and windows to prevent zombie entry.
+            Group Collaboration: Work with other survivors to defend the area, share resources, and support each other.
+            Stay Mobile: Be ready to move quickly to avoid being overrun by zombies.
+            Escape Planning
+
+            Identify Exits: Locate all possible exits, including main doors and emergency exits, and plan multiple escape routes.
+            Scouting Surroundings: Explore the surrounding area to identify potential safe zones and additional resources.</p>
+        </div>
+
+        <div class="location">
+            <h2>Eaton Centre</h2>
+            <img src=https://images.ctfassets.net/70unvdt5g4gf/2kOKKwARtcvylYSQSi1Ra/4641684c4ac8191e0dcd2a542d65774a/Toronto_Eaton_Centre-opengraph-min-min.jpeg alt="Eaton Centre">
+            <p> Structural Features
+
+            Multi-level Layout: Use the various floors and extensive layout of the mall to find secure hiding spots and navigate away from zombies.
+            Secure Stores: Identify stores with lockable gates or security doors for temporary shelter.
+            Resources
+
+            Food Courts and Shops: Scavenge food courts, restaurants, and shops for essential food, water, and supplies.
+            Utility Areas: Explore maintenance rooms and storage areas for tools and first aid kits.
+            Cover and Concealment
+
+            Back Rooms and Storage Areas: Use back rooms and storage areas of shops for hiding and protection.
+            Display Fixtures: Utilize store fixtures and furniture to create barricades or for concealment.
+            Communication and Navigation
+
+            Mall Maps: Use available mall maps to navigate and identify exits and safe zones.
+            Intercom System: Utilize the mall’s intercom system to communicate with other survivors or signal for help.
+            Safety and Defense
+
+            Barricade Entrances: Secure main entrances and corridors to prevent zombie entry and control access points.
+            Group Coordination: Work with other survivors to defend the mall and share resources.
+            Escape Planning
+
+            Identify Exits: Locate all possible exits, including emergency exits and service doors.
+            Rooftop Access: Consider the mall’s rooftop for a potential escape route or to signal rescuers.</p>
+        </div>
+
+        <div class="location">
+            <h2>Fort York</h2>
+            <img src=data:image/jpeg;base64,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 alt="Fort York">
+            <p> Historical Structures
+
+                Strong Fortifications: Take advantage of the fort’s sturdy walls and secure buildings for protection against zombies.
+                Barracks and Officer Quarters: Use these well-constructed rooms as safe shelters.
+                Open Grounds
+
+                Visibility: The open grounds provide clear sightlines to spot approaching zombies.
+                Maneuverability: Ample space allows for easy movement and strategic positioning.
+                Resources
+
+                Historical Supplies: Scavenge for tools, ropes, and other items from historical exhibits.
+                Storage Areas: Look for stored supplies, such as food, water, and medical kits.
+                Cover and Concealment
+
+                Tunnels and Hidden Passages: Use any available hidden passages or tunnels for discreet movement and escape.
+                Natural Elements: Utilize trees and other natural cover for hiding and protection.
+                Communication and Navigation
+
+                Fort Maps: Use historical maps of Fort York to navigate its layout and plan escape routes.
+                Signal Points: Utilize elevated areas like towers or walls to signal for help and communicate with others.
+                Safety and Strategy
+
+                Barricade Entrances: Strengthen entrances and windows to prevent zombie entry and maintain a secure perimeter.
+                Collaborate with Survivors: Work with other survivors to defend the fort and share resources.
+                Stay Alert: Keep constant watch for zombies and other threats to ensure safety.
+                Escape Planning
+
+                Identify Exits: Locate all possible exits, including main gates and any hidden or secondary exits.
+                Rendezvous Points: Establish clear meeting points within and around the fort for regrouping if separated. </p>
+        </div>
+    </div>
+
+    <div id="contact" class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> 123 Safe Haven Lane, Zombie-Free City, ZM 00001</p>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Email:</strong> contact@zombiesafezone.com</p>
+        <p><strong>Emergency Hotline:</strong> 1-800-ZOMBIES (1-800-966-2437)</p>
+    </div>
+</body>
+</html>
